@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<title>Centre Culturel National Catherine SAMBA-PANZA | Bangui</title>
+
+<meta name="description"
+content="Centre Culturel National Catherine SAMBA-PANZA à Bangui : concerts, soirées culturelles, expositions et événements artistiques.">
+
+<!-- Favicon -->
+<link rel="icon" href="https://drive.google.com/uc?export=view&id=1zkpGmvCZ4YrtUGSygL23YBUTKevWBJkm">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:Segoe UI, Arial, sans-serif;
+background:#000;
+color:#fff;
+overflow-x:hidden;
+padding-top:90px;
+}
+
+/* fond principal */
+
+.hero-bg{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:
+linear-gradient(rgba(0,0,0,.72),rgba(0,0,0,.72)),
+url('https://i.postimg.cc/j5vwRLyG/1000675701.jpg') center/cover no-repeat;
+z-index:-2;
+}
+
+/* container */
+
+.container{
+max-width:1200px;
+margin:auto;
+padding:20px;
+}
+
+/* NAV */
+
+nav{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 25px;
+z-index:999;
+background:rgba(0,0,0,.82);
+backdrop-filter:blur(10px);
+border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.logo-box{
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+.logo-box img{
+width:55px;
+height:55px;
+object-fit:cover;
+border-radius:50%;
+border:2px solid #FFD966;
+}
+
+.logo{
+font-size:1.1rem;
+font-weight:800;
+color:#FFD966;
+line-height:1.2;
+}
+
+.menu{
+display:flex;
+gap:15px;
+align-items:center;
+}
+
+.menu a{
+color:#fff;
+text-decoration:none;
+padding:10px 14px;
+border-radius:30px;
+font-weight:600;
+transition:.3s;
+}
+
+.menu a:hover{
+background:rgba(255,217,102,.15);
+color:#FFD966;
+}
+
+.menu-btn{
+display:none;
+background:none;
+border:1px solid #FFD966;
+color:#FFD966;
+padding:10px 14px;
+border-radius:30px;
+font-size:18px;
+cursor:pointer;
+}
+
+/* HERO */
+
+.hero{
+min-height:85vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:30px 10px;
+}
+
+.hero h1{
+font-size:3rem;
+color:#FFD966;
+margin-bottom:20px;
+line-height:1.2;
+}
+
+.hero p{
+font-size:1.2rem;
+max-width:750px;
+margin:auto;
+line-height:1.7;
+}
+
+.hero-btn{
+display:inline-block;
+margin-top:30px;
+padding:16px 28px;
+background:#FFD966;
+color:#000;
+font-weight:700;
+border-radius:40px;
+text-decoration:none;
+transition:.3s;
+}
+
+.hero-btn:hover{
+transform:translateY(-3px);
+}
+
+/* sections */
+
+section{
+padding:70px 0;
+}
+
+.section-title{
+font-size:2.2rem;
+text-align:center;
+color:#FFD966;
+margin-bottom:35px;
+}
+
+/* cards */
+
+.event-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:20px;
+}
+
+.card{
+background:rgba(0,0,0,.55);
+padding:25px;
+border-radius:24px;
+border:1px solid rgba(255,255,255,.08);
+transition:.35s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+border-color:rgba(255,217,102,.4);
+}
+
+.card img{
+width:100%;
+height:240px;
+object-fit:cover;
+border-radius:18px;
+margin-bottom:18px;
+}
+
+/* galerie */
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:15px;
+}
+
+.gallery img{
+width:100%;
+height:220px;
+object-fit:cover;
+border-radius:18px;
+transition:.3s;
+}
+
+.gallery img:hover{
+transform:scale(1.03);
+}
+
+/* form */
+
+.form-box{
+max-width:700px;
+margin:auto;
+background:rgba(0,0,0,.55);
+padding:25px;
+border-radius:25px;
+border:1px solid rgba(255,255,255,.08);
+}
+
+.form-box input,
+.form-box select,
+.form-box textarea{
+width:100%;
+padding:14px;
+margin-bottom:15px;
+border:none;
+border-radius:14px;
+font-size:16px;
+outline:none;
+}
+
+.form-box button{
+width:100%;
+padding:15px;
+border:none;
+border-radius:14px;
+background:#FFD966;
+font-weight:700;
+font-size:16px;
+cursor:pointer;
+transition:.3s;
+}
+
+.form-box button:hover{
+transform:translateY(-3px);
+}
+
+/* contact */
+
+.contact{
+text-align:center;
+background:rgba(0,0,0,.55);
+padding:30px;
+border-radius:25px;
+line-height:2;
+border:1px solid rgba(255,255,255,.08);
+}
+
+/* footer */
+
+footer{
+text-align:center;
+padding:35px 10px;
+color:#bbb;
+}
+
+/* whatsapp */
+
+.whatsapp{
+position:fixed;
+left:18px;
+bottom:18px;
+background:#25D366;
+color:#fff;
+padding:14px 18px;
+border-radius:50px;
+text-decoration:none;
+font-weight:700;
+z-index:999;
+box-shadow:0 8px 20px rgba(0,0,0,.3);
+}
+
+/* mobile menu */
+
+.mobile-menu{
+position:fixed;
+top:0;
+left:-100%;
+width:80%;
+height:100%;
+background:#050505;
+padding:30px;
+z-index:2000;
+transition:.3s;
+}
+
+.mobile-menu.open{
+left:0;
+}
+
+.mobile-menu a{
+display:block;
+color:#fff;
+text-decoration:none;
+padding:15px 0;
+font-size:20px;
+border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.close-btn{
+margin-bottom:20px;
+background:none;
+border:1px solid #FFD966;
+color:#FFD966;
+padding:10px 15px;
+border-radius:30px;
+}
+
+/* responsive */
+
+@media(max-width:768px){
+
+.menu{
+display:none;
+}
+
+.menu-btn{
+display:block;
+}
+
+.hero h1{
+font-size:2.2rem;
+}
+
+.section-title{
+font-size:1.8rem;
+}
+
+.gallery img{
+height:190px;
+}
+
+.logo{
+font-size:.9rem;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="hero-bg"></div>
+
+<!-- MENU MOBILE -->
+
+<div class="mobile-menu" id="mobileMenu">
+
+<button class="close-btn" onclick="closeMenu()">✕ Fermer</button>
+
+<a href="#accueil" onclick="closeMenu()">Accueil</a>
+<a href="#evenements" onclick="closeMenu()">Événements</a>
+<a href="#galerie" onclick="closeMenu()">Galerie</a>
+<a href="#reservation" onclick="closeMenu()">Réservation</a>
+<a href="#contact" onclick="closeMenu()">Contact</a>
+
+</div>
+
+<div class="container">
+
+<!-- NAV -->
+
+<nav>
+
+<div class="logo-box">
+
+<img
+src="https://drive.google.com/uc?export=view&id=1zkpGmvCZ4YrtUGSygL23YBUTKevWBJkm"
+alt="Logo Centre Culturel National Catherine SAMBA-PANZA">
+
+<div class="logo">
+CCNCSP
+</div>
+
+</div>
+
+<div class="menu">
+<a href="#accueil">Accueil</a>
+<a href="#evenements">Événements</a>
+<a href="#galerie">Galerie</a>
+<a href="#reservation">Réservation</a>
+<a href="#contact">Contact</a>
+</div>
+
+<button class="menu-btn" onclick="openMenu()">☰</button>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero" id="accueil">
+
+<div>
+
+<h1>Centre Culturel National Catherine SAMBA-PANZA</h1>
+
+<p>
+L’âme culturelle de Bangui — concerts, spectacles,
+expositions, conférences et rencontres artistiques.
+</p>
+
+<a href="#reservation" class="hero-btn">
+Réserver maintenant
+</a>
+
+</div>
+
+</section>
+
+<!-- EVENEMENTS -->
+
+<section id="evenements">
+
+<h2 class="section-title">Événements</h2>
+
+<div class="event-grid">
+
+<div class="card">
+
+<img
+src="https://drive.google.com/uc?export=view&id=1r9JdiAu1EMvzjNEKe4TAl3T5DNO3MEz-"
+alt="Affiche Soirée Gospel">
+
+<h3>🎶 Soirée Gospel</h3>
+
+<p>17 mai 2026</p>
+
+</div>
+
+<div class="card">
+<h3>🎶 Fête de la Musique</h3>
+<p>21 juin 2026</p>
+</div>
+
+<div class="card">
+<h3>📚 Rencontre Littéraire</h3>
+<p>22 juin 2026</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- GALERIE -->
+
+<section id="galerie">
+
+<h2 class="section-title">Galerie</h2>
+
+<div class="gallery">
+
+<img src="https://i.postimg.cc/ZqSwbG48/IMG-20260428-WA0245.jpg" alt="Événement culturel">
+<img src="https://i.postimg.cc/J7fjQXtG/IMG-20260428-WA0194.jpg" alt="Concert à Bangui">
+<img src="https://i.postimg.cc/mrgh8Tvw/1000676231.jpg" alt="Public du centre culturel">
+<img src="https://i.postimg.cc/vmTH53nv/1000676157.jpg" alt="Scène artistique">
+<img src="https://i.postimg.cc/sxYV38FX/1000676189.jpg" alt="Activité culturelle">
+<img src="https://i.postimg.cc/66rw2DSX/1000676233.jpg" alt="Rencontre artistique">
+<img src="https://i.postimg.cc/sgNRCyBH/1000676190.jpg" alt="Festival culturel">
+<img src="https://i.postimg.cc/8Pk8FsMZ/1000675708.jpg" alt="Centre culturel">
+<img src="https://i.postimg.cc/rpDMDz6W/1000675695.jpg" alt="Conférence">
+<img src="https://i.postimg.cc/6qv8nzDD/1000675696.jpg" alt="Spectacle artistique">
+<img src="https://i.postimg.cc/YqN974k1/1000675705.jpg" alt="Culture en RCA">
+
+</div>
+
+</section>
+
+<!-- RESERVATION -->
+
+<section id="reservation">
+
+<h2 class="section-title">Réservation</h2>
+
+<div class="form-box">
+
+<form id="bookingForm">
+
+<input
+type="text"
+id="name"
+placeholder="Nom complet"
+required>
+
+<input
+type="email"
+id="email"
+placeholder="Email"
+required>
+
+<select id="event" required>
+
+<option value="">
+Choisir le type d’activité
+</option>
+
+<option>Concert</option>
+<option>Masterclass</option>
+<option>Conférence</option>
+<option>Anniversaire</option>
+<option>Dot</option>
+<option>Mariage</option>
+<option>Autres</option>
+
+</select>
+
+<input
+type="number"
+id="places"
+min="1"
+value="2">
+
+<textarea
+id="message"
+rows="4"
+placeholder="Votre message"></textarea>
+
+<button type="submit">
+Envoyer la réservation
+</button>
+
+</form>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<h2 class="section-title">Contact</h2>
+
+<div class="contact">
+
+<p>📍 Bangui, République Centrafricaine</p>
+
+<p>📞 +236 72 16 52 88</p>
+
+<p>✉️ contact@ccsp.cf</p>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+© 2026 Centre Culturel National Catherine SAMBA-PANZA
+</footer>
+
+</div>
+
+<!-- WHATSAPP -->
+
+<a
+class="whatsapp"
+href="https://wa.me/23672165288"
+target="_blank">
+
+💬 WhatsApp
+
+</a>
+
+<!-- SCRIPT -->
+
+<script>
+
+function openMenu(){
+
+document.getElementById("mobileMenu")
+.classList.add("open");
+
+document.body.style.overflow="hidden";
+
+}
+
+function closeMenu(){
+
+document.getElementById("mobileMenu")
+.classList.remove("open");
+
+document.body.style.overflow="auto";
+
+}
+
+/* formulaire */
+
+document.getElementById("bookingForm")
+.addEventListener("submit",function(e){
+
+e.preventDefault();
+
+let name=document.getElementById("name").value;
+
+let email=document.getElementById("email").value;
+
+let event=document.getElementById("event").value;
+
+let places=document.getElementById("places").value;
+
+let message=document.getElementById("message").value;
+
+let text = encodeURIComponent(
+`Bonjour, je souhaite réserver.
+
+Nom : ${name}
+
+Email : ${email}
+
+Événement : ${event}
+
+Places : ${places}
+
+Message : ${message}`
+);
+
+const url =
+"https://wa.me/23672165288?text=" + text;
+
+window.location.href = url;
+
+});
+
+</script>
+
+</body>
+</html>
